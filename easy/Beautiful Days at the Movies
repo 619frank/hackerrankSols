@@ -1,0 +1,13 @@
+function beautifulDays(i, j, k) {
+    let result = 0
+    let reverse = 0
+    let a
+    for(let counter = i; counter <= j; counter++){
+        reverse = counter.toString().split("").reverse().join("")
+        let cal = (counter - reverse) % k
+        if(cal == 0){
+            result++
+        }
+    }
+    return result
+}
