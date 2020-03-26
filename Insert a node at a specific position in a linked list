@@ -1,0 +1,13 @@
+function insertNodeAtPosition(head, data, position) {
+
+    let newNode = new SinglyLinkedListNode(data)
+    let currentNode = head
+    let i = 0
+    while(i < position - 1){
+        currentNode = currentNode.next
+        i++
+    }
+    newNode.next = currentNode.next
+    currentNode.next = newNode
+    return head
+}
