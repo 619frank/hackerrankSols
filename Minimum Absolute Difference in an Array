@@ -1,0 +1,18 @@
+// the best way to do this is to sort the array and find the minumul value
+// the naive two for loop solution will fail the time complexity for some test cases
+function minimumAbsoluteDifference(arr) {
+    // let result = +Infinity
+    // for(let i = 0; i < arr.length; i++){
+    //     for(let j= i+1; j < arr.length; j++){            
+    //         result = Math.min(result,Math.abs(arr[i] - arr[j]))            
+    //     }
+    // }
+    // return result
+
+    arr.sort((a,b) => a - b)
+    let minimum_value = +Infinity
+    for(let i = 0; i < arr.length -1; i++){
+        minimum_value = Math.min(minimum_value,Math.abs(arr[i] - arr[i+1]))
+    }
+    return minimum_value
+}
