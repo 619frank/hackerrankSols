@@ -1,0 +1,12 @@
+function deleteNode(head, position) {
+    if(position === 0) return head.next
+    let counter = 0
+    let current = head
+    while(counter < position-1){
+        current = current.next
+        counter++
+    }
+    current.next = current.next.next
+
+    return head
+}
